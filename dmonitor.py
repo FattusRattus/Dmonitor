@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# Wifi Deauthentication & Disassociation monitor
+
 import signal
 import sys
 import csv
