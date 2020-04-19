@@ -59,7 +59,7 @@ def wifisniff(pk):
                      wifi1 = "{:<17}".format(ap_list[ap][0])[:17]
                   if str.upper(ap_list[ap][1]) == wifi2:
                      wifi2 = "{:<17}".format(ap_list[ap][0])[:17]
-            
+
             print_at( 3, line + 8, ("Deauthentication" if d == 'A' else "# Disassociation") + " Packet: " + wifi1 + " <--> " + wifi2 + " - Packets : " + str(p) + "     ")
             line+=1
 
@@ -71,7 +71,7 @@ def wifisniff(pk):
 os.system("iw reg set GB")
 
 # Get command line inputs
-parser = optparse.OptionParser("\nusage ./dmonitor.py " + "-i <interface> [-e <ESSID>] [-d <APs database.]" + "\nRequires wifi interface in monitor mode.\n")
+parser = optparse.OptionParser("\nusage ./dmonitor.py " + "-i <interface> [-e <ESSID>] [-d <APs database.]" + "\nRequires wifi interface NOT to be in monitor mode.\n")
 parser.add_option('-i', dest='interface', type='string', help='specify minitor interface, i.e. wlan0mon')
 parser.add_option('-d', dest='apdb', type='string', default = "", help='specify APs database (CSV format)')
 parser.add_option('-e', dest='essid', type='string', help='specify AP (ESSID)')
