@@ -72,7 +72,7 @@ def wifisniff(pk):
 os.system("iw reg set GB")
 
 # Get command line inputs
-parser = optparse.OptionParser("\nusage ./dmonitor.py " + "-i <interface> [-e <ESSID>] [-d <APs database.]" + "\nRequires wifi interface in monitor mode.\n")
+parser = optparse.OptionParser("\nusage ./dmonitor.py " + "-i <interface> [-e <ESSID>] [-d <APs database.]" + "\nRequires wifi interface NOT to be in monitor mode.\n")
 parser.add_option('-i', dest='interface', type='string', help='specify minitor interface, i.e. wlan0mon')
 parser.add_option('-d', dest='apdb', type='string', default = "", help='specify APs database (CSV format)')
 parser.add_option('-e', dest='essid', type='string', help='specify AP (ESSID)')
